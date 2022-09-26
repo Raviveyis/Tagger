@@ -71,7 +71,7 @@ rxyzdev_initT = {}
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def info(event):
-  await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim:  Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
+  await event.reply("**👋 Salam 💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyanal botam🤖\n\nRƏSMİ KANAL : @lovelesslifee",
                     buttons=(
                       [
                        Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Naz_Tagger_bot?startgroup=a')
