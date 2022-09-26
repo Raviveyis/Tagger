@@ -43,10 +43,10 @@ LOGGER = logging.getLogger(__name__)
 api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
 bot_token = os.environ.get("TOKEN")
-DATABASE_URL = os.environ.get("DATABASE_URL") # MongoDB veritabanınızın url'si. Nasıl alacağınızı bilmiyorsanız destek grubu @RepoHaneX'e gelin.
+DATABASE_URL = os.environ.get("DATABASE_URL") # MongoDB veritabanınızın url'si. Nasıl alacağınızı bilmiyorsanız destek grubu @lovelesslifee'e gelin.
 BOT_USERNAME = os.environ.get("BOT_USERNAME") # Botunuzun kullanıcı adı.
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
-GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "SohbetGoVip") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
+GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "lovelesslifee") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", False) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
 OWNER_ID = int(os.environ.get("OWNER_ID")) # Sahip hesabın id'si
 LANGAUGE = os.environ.get("LANGAUGE", "TR")
@@ -74,14 +74,14 @@ async def info(event):
   await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim:  Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
                     buttons=(
                       [
-                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Startaggerbot?startgroup=a')
+                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Naz_Tagger_bot?startgroup=a')
                       ],
                       [
-                       Button.url('📢 Kanal', 'https://t.me/StarBotKanal'),
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/Hayiboo')
+                       Button.url('📢 Kanal', 'https://t.me/lovelesslifee'),
+                       Button.url('🇹🇷 Sahibim', 'https://t.me/BenimKiller')
                       ],
                       [
-                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/MehmetAtes21/Tagger')
+                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/Raviveyis/Tagger')
                       ],
                     ),
                     link_preview=False
@@ -106,7 +106,7 @@ async def start(event):
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/StartaggerBot?startgroup=a'),
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/Naz_Tagger_bot?startgroup=a'),
                        Button.url('Kanal', 'https://t.me/StarBotKanal')
                       ],
                       [
@@ -124,16 +124,16 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**Merhaba Ben @MinaTagBot\nGrubunuzdakı Üyeleri Etiketleye Bilirim\nKomutlar için Komutlar Düğmesine Tıklaya Bilirsiz**", buttons=(
+     await event.edit(f"**Merhaba Ben @Naz_Tagger_bot\nGrubunuzdakı Üyeleri Etiketleye Bilirim\nKomutlar için Komutlar Düğmesine Tıklaya Bilirsiz**", buttons=(
                       [
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/StartaggerBot?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/StarBotKanal')
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/Naz_Tagger_bot?startgroup=a'),
+                       Button.url('Kanal', 'https://t.me/lovelesslifee')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/Hayiboo')
+                       Button.url('Sahibim', 'https://t.me/Benimkiller')
                       ],
                     ),
                     link_preview=False)
